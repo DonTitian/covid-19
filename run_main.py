@@ -335,8 +335,8 @@ def get_test_result():
 
 
 if __name__ == '__main__':
-    X_train, y_train, X_val, y_val= get_data()
+    # X_train, y_train, X_val, y_val= get_data()
     # H = get_train_model(X_train, y_train, X_val, y_val)
-    H = get_train_model_none(X_train, y_train, X_val, y_val)
+    # H = get_train_model_none(X_train, y_train, X_val, y_val)
     get_test_result()
     # get_val_result()
