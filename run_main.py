@@ -237,9 +237,8 @@ def get_train_model_none(X_train, y_train, X_test, y_test):
     # targets = y_train
 
     # for i,(train, test) in enumerate(kfold.split(inputs, targets.argmax(1))):#kfold.split(inputs, targets)
+    model = choose_model(method)
     for i in range(5):
-        model = choose_model(method)
-
         #early stopping
         # early_stopping = EarlyStopping(monitor='val_loss', patience=50, verbose=2)
         my_callbacks = [
