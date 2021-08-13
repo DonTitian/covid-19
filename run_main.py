@@ -44,7 +44,7 @@ set_session(tf.Session(config=config))
 from keras import backend as K
 
 #paths
-method = "Resnet"
+method = "CNN"
 img_path = "./png/" + method + "/"
 model_path = "./model/" + method + "/"
 csv_path = './save_csv/' + method + '/CNN-8-13-5x50epoch.csv'
@@ -243,7 +243,7 @@ def get_train_model_none(X_train, y_train, X_test, y_test):
         #early stopping
         # early_stopping = EarlyStopping(monitor='val_loss', patience=50, verbose=2)
         my_callbacks = [
-            keras.callbacks.ModelCheckpoint(filepath=model_path + '8-13-{0}.h5'.format(i), save_best_only=True),
+            keras.callbacks.ModelCheckpoint(filepath=model_path + '8-13-out-{0}.h5'.format(i), save_best_only=True),
             # early_stopping
         ]
 
